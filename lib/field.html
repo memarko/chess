@@ -1,0 +1,9 @@
+<template name="field">
+  <td class="field {{#if getColor}} field-black {{else}} field-white {{/if}}">
+    <div class="mark {{#if isMark}} mark-marked {{/if}}" >
+      {{#if getObj}}
+        {{> obj obj=getObj}}
+      {{/if}}
+    </div>
+  </td>
+</template>

@@ -1,0 +1,11 @@
+<template name="board">
+  <table class="board">
+    {{#each data.fields}}
+    <tr>
+      {{#each this}}
+        {{> field}}
+      {{/each}}
+    </tr>
+    {{/each}}
+  </table>
+</template>
