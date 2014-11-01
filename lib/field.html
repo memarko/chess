@@ -1,8 +1,10 @@
 <template name="field">
-  <td class="field {{#if getColor}} field-black {{else}} field-white {{/if}}">
-    <div class="mark {{#if isMark}} mark-marked {{/if}}" >
-      {{#if getObj}}
-        {{> obj obj=getObj}}
+  <td class="field {{#if data.color}} field-black {{else}} field-white {{/if}}">
+    <div class="mark {{#if data.mark}} mark-marked {{/if}}" >
+      {{#if data.getObj}}
+        {{> obj obj=data.getObj}}
+      {{else}}
+        <img src="svg/empty.svg" class="obj" />
       {{/if}}
     </div>
   </td>

@@ -1,9 +1,10 @@
 <template name="board">
+  <button id="newgame">New game</button>
   <table class="board">
-    {{#each data.fields}}
+    {{#each data}}
     <tr>
       {{#each this}}
-        {{> field}}
+        {{> field f=this}}
       {{/each}}
     </tr>
     {{/each}}

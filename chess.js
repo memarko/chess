@@ -1,4 +1,3 @@
-Board
 if (Meteor.isClient) {
   // counter starts at 0
   Session.setDefault("counter", 0);
@@ -10,7 +9,7 @@ if (Meteor.isClient) {
   });
 
   Template.hello.events({
-    'click button': function() {
+    'click #clickme': function() {
       // increment the counter when button is clicked
       Session.set("counter", Session.get("counter") + 1);
     }
@@ -19,7 +18,7 @@ if (Meteor.isClient) {
 if (Meteor.isServer) {
   Meteor.startup(function() {
     // code to run on server at startup
-    
+    Field.initData();
   });
 
 }
